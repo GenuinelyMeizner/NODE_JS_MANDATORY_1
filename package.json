@@ -2,6 +2,7 @@
     "dependencies": {
         "bootstrap": "^5.1.3",
         "express": "^4.17.1",
-        "nodemon": "^2.0.13"
+        "jquery": "^3.6.0",
+        "nodemon": "^2.0.14"
     }
 }

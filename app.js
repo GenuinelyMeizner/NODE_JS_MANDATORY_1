@@ -3,10 +3,11 @@ const app = express();
 
 app.use(express.static("public"));
 app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
+app.use(express.static(__dirname + '/node_modules/jquery/dist'));
 
 app.get("/", (req, res) => {
-    //res.sendFile(__dirname + "/public/fragments/sidebar/sidebar.html");
-    res.sendFile(__dirname + "/public/frontpage/index.html");
+    res.sendFile(__dirname + "/public/fragments/sidebar/sidebar.html");
+    //res.sendFile(__dirname + "/public/frontpage/index.html");
 });
 
 app.get("/variables", (req, res) => {

@@ -17,10 +17,15 @@ async function createSidebar() {
     thHeader.setAttribute("scope", "col");
     trHeader.appendChild(thHeader);
 
+    const aHeader = document.createElement("a");
+    aHeader.setAttribute("href", "/");
+    aHeader.setAttribute("class", "link-light text-decoration-none");
+    thHeader.appendChild(aHeader);
+
     const header = document.createElement("h3");
     header.setAttribute("class", "text-light ps-2");
-    header.textContent = "Subjects";
-    thHeader.appendChild(header);
+    header.textContent = "Node.js - Documentation";
+    aHeader.appendChild(header);
     
     const tbody = document.createElement("tbody");
     table.appendChild(tbody);
