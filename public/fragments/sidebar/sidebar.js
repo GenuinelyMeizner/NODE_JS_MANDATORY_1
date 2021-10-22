@@ -38,12 +38,12 @@ async function createSidebar() {
     trVariables.appendChild(thVariables);
 
     const variables = document.createElement("a");
-    variables.setAttribute("href", "/variables");
+    variables.setAttribute("href", "/setup_npm");
     variables.setAttribute("class", "link-light text-decoration-none");
     thVariables.appendChild(variables);
 
     const liVariables = document.createElement("li");
-    liVariables.textContent = "Variables";
+    liVariables.textContent = "Project setup with npm";
     variables.appendChild(liVariables);
 
     const trFunctions = document.createElement("tr");
@@ -54,12 +54,12 @@ async function createSidebar() {
     trFunctions.appendChild(thFunctions);
 
     const functions = document.createElement("a");
-    functions.setAttribute("href", "/functions");
+    functions.setAttribute("href", "/express");
     functions.setAttribute("class", "link-light text-decoration-none");
     thFunctions.appendChild(functions);
 
     const liFunctions = document.createElement("li");
-    liFunctions.textContent = "Functions";
+    liFunctions.textContent = "Working with express";
     functions.appendChild(liFunctions);
 
     const trObjects = document.createElement("tr");
@@ -70,11 +70,11 @@ async function createSidebar() {
     trObjects.appendChild(thObjects);
 
     const objects = document.createElement("a");
-    objects.setAttribute("href", "/objects");
+    objects.setAttribute("href", "/crud");
     objects.setAttribute("class", "link-light text-decoration-none");
     thObjects.appendChild(objects);
 
     const liObjects = document.createElement("li");
-    liObjects.textContent = "Objects";
+    liObjects.textContent = "CRUD with express";
     objects.appendChild(liObjects);
 }

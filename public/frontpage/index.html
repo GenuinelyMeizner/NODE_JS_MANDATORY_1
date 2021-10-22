@@ -6,16 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <script src="../fragments/sidebar/sidebar.js" defer></script>
-    <title>Documentation Frontpage</title>
+    <title>Node.js - Documentation</title>
 </head>
 <body class="bg-dark">
-    <div class="container-fluid" style="padding-left: 0px;">
+    <div class="container-fluid px-0">
         <div class="row">
             <div class="col-3" id="sidebar">
                 <!--Reserved for dynamically created sidebar-->
             </div>
             <div class="col">
-                <!--Input article here-->
+                <!--Sources:
+                https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm
+                https://www.freecodecamp.org/news/what-exactly-is-node-js-ae36e97449f5/
+                https://en.wikipedia.org/wiki/Node.js
+                -->
+                <h1 class="text-light text-center mt-3">
+                    Node.js
+                </h1>
+                <h3 class="text-light">
+                    What is Node.js?
+                </h3>
+
+                <p class="text-light">
+                    Node.js is a open-source event driven server-side development environment, that offers cross-platform compatibility and fast code execution.
+                    <br>
+                    <br>
+                    It utilizes the Javascript V8 engine which offers fast code execution and enables full front-end/back-end control through only Javascript. 
+                    <br>
+                    <br>
+                    Furthermore, it is run on a single thread with event looping which offers non-blocking user requests and no buffering of data. It also acts asynchronously thus it never waits for an API to return data.
+                    <br>
+                    <br>
+                    Node.js is released under the MIT license, so it is completely free to use.
+                </p>
+
+                <h3 class="text-light">
+                    Why use Node.js?
+                </h3>
+
+                <h6 class="text-light">
+                    Javascript V8 Engine
+                </h6>
+                <p class="text-light">
+                    The Javascript V8 engine offers back-end development through Javascript and is generally considered to have very fast code execution compared to traditional server-side/networking applications.
+                </p>
+
+                <h6 class="text-light">
+                    Cross-platform compatibility
+                </h6>
+                <p class="text-light">
+                    You are able to deploy all Node.js projects to nearly every operating systems in use, although between UNIX based operating systems and Windows you may have to make alterations to your code, specifically your paths as UNIX and Windows use different indexing methods.
+                </p>
+
+                <h6 class="text-light">
+                    Asynchronous and event driven
+                </h6>
+                <p class="text-light">
+                    Every API you make is asynchronous, which means that your server never waits for the API to return data, but just moves along to the next call. A notification event within Node.js will notify the server to get the requested data from the previous API call.
+                </p>
+
+                <h6 class="text-light">
+                    Single Threaded
+                </h6>
+                <p class="text-light">
+                    Node.js uses just a single thread to provide service to it's users, through it's event looping it makes the Node.js server much more scalable than traditional servers.
+                </p>
+
+                <h6 class="text-light">
+                    No-Buffering
+                </h6>
+                <p class="text-light">
+                    The server never buffers any data, but just outputs data.
+                </p>
+
+                <h6 class="text-light">
+                    MIT License
+                </h6>
+                <p class="text-light">
+                    Node.js is completly free to use, both commercially and privately.
+                </p>
+
+                <h3 class="text-light">
+                    How do I get started?
+                </h3>
+                <p class="text-light">
+                    Download Node.js through <a href="https://nodejs.org/en/" class="link-light" target="_blank" rel="noopener norefferer">https://nodejs.org/en/</a>.
+                    <br>
+                    <br>
+                    Choose your favorite Javascript IDE (I use Visual Studio Code) and install it.
+                    <br>
+                    <br>
+                    In the next section I will expand how to use Node.
+                </p>
+            </div>
+            <div class="col-3">
+
             </div>
         </div>
     </div> 

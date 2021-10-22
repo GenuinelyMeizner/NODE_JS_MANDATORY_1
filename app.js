@@ -6,20 +6,20 @@ app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 app.use(express.static(__dirname + '/node_modules/jquery/dist'));
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/fragments/sidebar/sidebar.html");
-    //res.sendFile(__dirname + "/public/frontpage/index.html");
+    //res.sendFile(__dirname + "/public/fragments/sidebar/sidebar.html");
+    res.sendFile(__dirname + "/public/frontpage/index.html");
 });
 
-app.get("/variables", (req, res) => {
-    res.sendFile(__dirname + "/public/content/variables/variables.html");
+app.get("/setup_npm", (req, res) => {
+    res.sendFile(__dirname + "/public/content/setup_npm/setup_npm.html");
 });
 
-app.get("/functions", (req, res) => {
-    res.sendFile(__dirname + "/public/content/functions/functions.html");
+app.get("/express", (req, res) => {
+    res.sendFile(__dirname + "/public/content/express/express.html");
 });
 
-app.get("/objects", (req, res) => {
-    res.sendFile(__dirname + "/public/content/objects/objects.html");
+app.get("/crud", (req, res) => {
+    res.sendFile(__dirname + "/public/content/crud/crud.html");
 })
 
 const PORT = process.env.PORT || 8080;
