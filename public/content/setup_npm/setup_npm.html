@@ -15,7 +15,70 @@
                 <!--Reserved for dynamically created sidebar-->
             </div>
             <div class="col">
-                <!--Input article here-->
+                <h1 class="text-light text-center mt-3">
+                    Project setup with npm
+                </h1>
+                <h3 class="text-light">
+                    What is npm?
+                </h3>
+                <p class="text-light">
+                    Node Package Manager is the inbuilt package manager that sorts out all of your dependencies.
+                    <br>
+                    <br>
+                    Your project dependencies are all the community/commercially made libraries/frameworks that you want to add to your project.
+                </p>
+                <h3 class="text-light">
+                    How do you use npm?
+                </h3>
+                <p class="text-light">
+                    My opinion of a standard Node.js project would need the following dependencies.
+                    <ul class="text-light">
+                        <li><a href="https://www.npmjs.com/package/express" class="link-light">Express</a></li>
+                        <li><a href="https://www.npmjs.com/package/nodemon" class="link-light">Nodemon</a></li>
+                        <li><a href="https://www.npmjs.com/package/bootstrap" class="link-light">Bootstrap</a></li>
+                    </ul>
+                </p>
+                <p class="link-light">
+                    There are two ways (maybe more) to install npm's, both ways require us to open a terminal.
+                </p>
+                <h3 class="text-light">
+                    Predetermined package.json
+                </h3>
+                <p class="text-light">
+                    We can predetermine which npm's we want to install and then install them all in one go.
+                    To do this we need to create a file called package.json, it should be placed on the top-level of your projects directory.
+                    In the package.json file you can manually write all the different libraries that you want to depend on.
+                    <br>
+                    <br>
+                    Disregard everything in the picture except the package.json file placement and content.
+                </p>
+                <img src="/ressources/images/package.PNG" class="img-fluid">
+                <p class="text-light">
+                    When you've written all the different dependencies you want, you need to run a command through the terminal.
+                </p>
+                <img src="/ressources/images/package_npm_command.PNG" class="img-fluid">
+                <p class="text-light">
+                    Using the command 'npm install' will install all the dependencies that you've written in the package.json file.
+                </p>
+                <h3 class="text-light">
+                    Manual npm install
+                </h3>
+                <p class="text-light">
+                    If you want to install each library one by one, you still need a package.json file and a terminal open, but you do not need to fill out the dependencies, as the installation will do that for you automatically.
+                    <br>
+                    <br>
+                    Instead of writing all the dependencies you just install the specific npm through a command.
+                    <br>
+                    <br>
+                    This command, pictured below, will install bootstrap and automatically write it into your package.json file.
+                </p>
+                <img src="/ressources/images/npm_manual_install.PNG" class="image-fluid">
+                <p class="text-light">
+                    We've gone over how to install dependencies using npm, in the next section we'll be using them.
+                </p>
+            </div>
+            <div class="col-3">
+                <!--Reserved for spacing-->
             </div>
         </div>
     </div> 
