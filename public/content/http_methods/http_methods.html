@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="../fragments/sidebar/sidebar.js" defer></script>
+    <title>CRUD with express</title>
+</head>
+<body class="bg-dark">
+    <div class="container-fluid px-0">
+        <div class="row">
+            <div class="col-3" id="sidebar">
+                <!--Reserved for dynamically created sidebar-->
+            </div>
+            <div class="col">
+                <h1 class="text-light text-center mt-3">
+                    Routes and HTTP Methods
+                <h3 class="text-light">
+                    What are routes?
+                </h3>
+                <p class="text-light">
+                    In a node.js express application routes are the vehicles for your server-side navigation. 
+                    <br>
+                    <br>
+                    A route is comprised of a HTTP method and a endpoint. The endpoint is the associated URL for the route, while the method is the requested function.
+                    <br>
+                    <br>
+                    Five common HTTP methods are explained underneath.
+                </p>
+                <table class="table table-dark table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                Method
+                            </th>
+                            <th scope="col">
+                                Function
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                GET
+                            </th>
+                            <th scope="row">
+                                Retrieves data entry
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                POST
+                            </th>
+                            <th scope="row">
+                                Create data entry
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                PUT
+                            </th>
+                            <th scope="row">
+                                Update entire data entry
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                PATCH
+                            </th>
+                            <th scope="row">
+                                Update parts of data entry
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                DELETE
+                            </th>
+                            <th scope="row">
+                                Deletes data entry
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="text-light">
+                    How do we use routes?
+                </h3>
+                <h6 class="text-light">
+                    Data storage
+                </h6>
+                <img src="/ressources/images/list_auto_increment.PNG">
+                <p class="text-light">
+                    Normally you would use a database to store your data, but as we are just playing around, we will just use a list and an auto-incrementer to act as data storage for the rest of the methods.
+                </p>
+                <h6 class="text-light">
+                    GET
+                </h6>
+                <img src="/ressources/images/get_method.PNG" class="img-fluid">
+                <p class="text-light">
+                    This function uses an endpoint and a callback function to get the requested html file.
+                    <br>
+                    <br>
+                    Inside the callback function we ask the response to send a html file from our root directory plus the requested path.
+                </p>
+                <h6 class="text-light">
+                    GET with request parameter
+                </h6>
+                <img src="/ressources/images/get_method_request_param.PNG">
+                <p class="text-light">
+                    Request parameters allow us to do a check, when we are looking for a specific data entry. This is also why it is so important that each data entry has a unique id.
+                    <br>
+                    <br>
+                    In this method we want a specific customer. Notice that the endpoint is changed to include the '/:id', which means that we'll provide a parameter to the endpoint.
+                    <br>
+                    <br>
+                    We start with a check to see if we have the customer in our list, if we do we return the customer and if we don't we send back an error code.
+                </p>
+                <h6 class="text-light">
+                    POST
+                </h6>
+                <img src="/ressources/images/post_request.PNG">
+                <p class="text-light">
+                    Normally we would use a POST method after filling in a form or making a data entry, in this example we'll just play that we've done so.
+                    <br>
+                    <br>
+                    We set the customer that we want to add to our list to be equal to request.body. The form we've used should create a body of data in JSON format, that we can POST to our list.
+                    <br>
+                    <br>
+                    As we want all data entries to have a unique id, we have used an auto-incrementer to make sure that each entry has a unique id.
+                    <br>
+                    <br>
+                    We then push the new customer to the list and return a message.
+                </p>
+                <h6 class="text-light">
+                    PATCH
+                </h6>
+                <img src="/ressources/images/patch_request.PNG">
+                <p class="text-light">
+                    We create a editable object which we use to store the changes that we want to patch. 
+                    <br>
+                    <br>
+                    We then map our variables within our list and check if the data entry is in the list. If it is in the list we edit the various parts of the object based off the new inputs we've made. and then return the patched customer. If it is not in our list we send back an error.
+                </p>
+                <h6 class="text-light">
+                    DELETE
+                </h6>
+                <img src="/ressources/images/delete_request.PNG">
+                <p class="text-light">
+                    We create a variable that we set to false. We filter the list and checks if the requested id is contained. 
+                    <br>
+                    <br>
+                    If it is we set our variable to true, which deletes the object, if not we send an error code.
+                </p>
+            </div>
+            <div class="col-3">
+
+            </div>
+        </div>
+    </div> 
+</body>
+</html>

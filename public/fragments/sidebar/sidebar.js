@@ -70,11 +70,11 @@ async function createSidebar() {
     trObjects.appendChild(thObjects);
 
     const objects = document.createElement("a");
-    objects.setAttribute("href", "/crud");
+    objects.setAttribute("href", "/http_methods");
     objects.setAttribute("class", "link-light text-decoration-none");
     thObjects.appendChild(objects);
 
     const liObjects = document.createElement("li");
-    liObjects.textContent = "CRUD with express";
+    liObjects.textContent = "Routes with HTTP methods";
     objects.appendChild(liObjects);
 }
