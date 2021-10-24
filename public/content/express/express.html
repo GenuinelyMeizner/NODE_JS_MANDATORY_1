@@ -15,7 +15,60 @@
                 <!--Reserved for dynamically created sidebar-->
             </div>
             <div class="col">
-                <!--Input article here-->
+                <!--Soruces:
+                https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
+                -->
+                <h1 class="text-light text-center mt-3">
+                    Express
+                </h1>
+                <h3 class="text-light">
+                    What is express?
+                </h3>
+                <p class="text-light">
+                    Express is the most popular node.js web framework that enables us to write HTTP request handlers through various URL paths.
+                    <br>
+                    <br>
+                    This is normally refered to as routes in node.js.
+                </p>
+                <h3 class="text-light">
+                    How do we use it?
+                </h3>
+                <p class="text-light">
+                    First off we need to create a file called app.js, where all our server-side code will go into, on the top-level directory of our project.
+                    <br>
+                    <br>
+                    Then we need to import the express module and create an express application.
+                    <br>
+                    <br>
+                    We do this by using these two lines of code.
+                </p>
+                <img src="ressources/images/import_create_express.PNG" class="img-fluid">
+                <p class="text-light">
+                    We want to add some middleware to our express project, in order for this to happen we need a path to our content directory (default naming is usually 'public'), aswell as a path to all the different libraries we've imported, such as bootstrap.
+                    <br>
+                    <br>
+                    This enables our express application to utilize the files that we serve to it.
+                    <br>
+                    <br>
+                    We serve these static files by writing the following lines.
+                </p>
+                <img src="ressources/images/app_use_express.PNG" class="img-fluid">
+                <p class="text-light">
+                    We are nearly ready to begin creating something, but we still need to figure out which port we will be hosting our server on.
+                    <br>
+                    <br>
+                    The default port is 8080, but we might want to change that for one reason or another, so we write the following code, to make that happen.
+                </p>
+                <img src="ressources/images/port_express.PNG">
+                <p class="text-light">
+                    We set the PORT to be the preconfigured enviroment variable and if that is not available it will use the one we dictated, followed by some error handling within a callback function and a console message to confirm to the developer that it has started on the corect port.
+                    <br>
+                    <br>
+                    We are now ready to create routes.
+                </p>
+            </div>
+            <div class="col-3">
+                
             </div>
         </div>
     </div> 
